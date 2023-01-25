@@ -1,0 +1,185 @@
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* 1 em - width of the letter m , it's relative , depends where */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--magenta);
+}
+a:hover {
+  color: var(--hotmag);
+  text-decoration: none;
+}
+
+/* intro styles */
+
+#intro {
+  padding-bottom: 10rem;
+  /* padding: 10rem; */
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#intro .name {
+  font-family: var(--mono);
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+}
+
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--plum);
+  font-family: var(--mono);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#contact p {
+  font-family: var(--sans);
+}
+
+#contact a {
+  margin-top: 1rem;
+}
+/* navbar */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+/* links , visited, unvisited, hover, focus, active */
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--aqua);
+}
+nav .fa-terminal {
+  font-size: 90%;
+  color: var(--aqua);
+}
+
+nav [class*="fa-"]:hover {
+  color: var(--magenta);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: var(--magenta);
+}
+
+.button {
+  background-color: var(--magenta);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--hotmag);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+/* footer section */
+footer {
+  /* font-family: var(--mono); */
+  padding: 3rem;
+  text-align: center;
+}
+
+footer ul {
+  font-size: 200%;
+  list-style-type: none;
+  /* padding: 0; */
+  /* margin: 2rem 0; */
+  display: flex;
+  /* flex-flow: row wrap; */
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+}
